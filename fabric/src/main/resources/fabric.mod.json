@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "universe_matter",
+  "version": "${version}",
+  "name": "Universe Matter",
+  "description": "Allows the use of energy from the universe. BUT BE CAREFUL!",
+  "authors": [
+    "HttpRafa"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/universe_matter/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.rafael.universe.matter.fabric.UniverseMatterFabric"
+    ]
+  },
+  "mixins": [
+    "universe_matter.mixins.json",
+    "universe_matter-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2",
+    "architectury": ">=6.2.43"
+  }
+}
