@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "de.rafael.universe.matter.fabric.UniverseMatterFabric"
+      "de.rafael.mods.universe.matter.fabric.UniverseMatterFabric"
     ]
   },
   "mixins": [

@@ -1,2 +1,8 @@
 {
+  "itemGroup.universe_matter.main": "Universe Matter",
+
+  "block.universe_matter.osmium_ore": "Osmium Ore",
+  "block.universe_matter.deepslate_osmium_ore": "Deepslate Osmium Ore",
+  "block.universe_matter.raw_osmium_block": "Raw Osmium Block",
+  "block.universe_matter.osmium_block": "Osmium Block"
 }

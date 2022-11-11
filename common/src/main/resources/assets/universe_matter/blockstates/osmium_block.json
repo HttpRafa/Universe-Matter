@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "universe_matter:block/osmium_block"
+    }
+  }
+}
