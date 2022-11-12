@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[43,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/HttpRafa/Universe-Matter/issues"
 license = "MIT"
 
 [[mods]]
@@ -11,7 +11,7 @@ authors = "HttpRafa"
 description = '''
 Allows the use of energy from the universe. BUT BE CAREFUL!
 '''
-#logoFile = ""
+logoFile = "icon.png"
 
 [[dependencies.universe_matter]]
 modId = "forge"
