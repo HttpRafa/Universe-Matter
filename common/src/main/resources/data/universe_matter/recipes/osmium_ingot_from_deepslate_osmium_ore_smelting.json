@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "universe_matter:deepslate_osmium_ore"
+  },
+  "result": "universe_matter:osmium_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

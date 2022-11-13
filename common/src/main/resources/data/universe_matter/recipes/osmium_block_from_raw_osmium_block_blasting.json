@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "universe_matter:raw_osmium_block"
+  },
+  "result": "universe_matter:osmium_block",
+  "experience": 3.6,
+  "cookingtime": 900
+}

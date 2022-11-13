@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "universe_matter_platform:osmium_blocks"
+    }
+  ],
+  "result": {
+    "item": "universe_matter:osmium_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "required": false,
+      "id": "#c:osmium_ingots"
+    },
+    {
+      "required": false,
+      "id": "#forge:osmium_ingots"
+    }
+  ]
+}

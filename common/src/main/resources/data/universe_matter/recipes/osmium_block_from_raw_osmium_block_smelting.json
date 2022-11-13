@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "universe_matter:raw_osmium_block"
+  },
+  "result": "universe_matter:osmium_block",
+  "experience": 7.2,
+  "cookingtime": 1800
+}

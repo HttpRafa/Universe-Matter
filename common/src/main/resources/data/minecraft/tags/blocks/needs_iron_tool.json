@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "universe_matter:osmium_block",
+    "universe_matter:raw_osmium_block",
+    "universe_matter:osmium_ore",
+    "universe_matter:deepslate_osmium_ore"
+  ]
+}

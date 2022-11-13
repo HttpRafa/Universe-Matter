@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "universe_matter:raw_osmium"
+    }
+  },
+  "result": {
+    "item": "universe_matter:raw_osmium_block",
+    "count": 1
+  }
+}

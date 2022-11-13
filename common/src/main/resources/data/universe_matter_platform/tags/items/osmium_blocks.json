@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "required": false,
+      "id": "#c:osmium_blocks"
+    },
+    {
+      "required": false,
+      "id": "#forge:osmium_blocks"
+    }
+  ]
+}

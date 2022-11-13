@@ -46,6 +46,8 @@ public class ModBlocks {
     // Osmium
     public static final Supplier<Block> OSMIUM_BLOCK = register("osmium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
     public static final Supplier<Block> RAW_OSMIUM_BLOCK = register("raw_osmium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK)));
+
+    // Ores
     public static final Supplier<Block> OSMIUM_ORE = register("osmium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_ORE), UniformInt.of(0, 2)));
     public static final Supplier<Block> DEEPSLATE_OSMIUM_ORE = register("deepslate_osmium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_GOLD_ORE), UniformInt.of(0, 2)));
 

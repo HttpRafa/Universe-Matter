@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "universe_matter:raw_osmium_block",
+    "mekanism:block_raw_osmium"
+  ]
+}

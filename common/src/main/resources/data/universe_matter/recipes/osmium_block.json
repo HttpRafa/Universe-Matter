@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "uuu",
+        "uuu",
+        "uuu"
+    ],
+    "key": {
+        "u": {
+            "tag": "universe_matter_platform:osmium_ingots"
+        }
+    },
+    "result": {
+        "item": "universe_matter:osmium_block",
+        "count": 1
+    }
+}
