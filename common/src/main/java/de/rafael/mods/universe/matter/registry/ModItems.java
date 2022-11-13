@@ -43,8 +43,12 @@ import java.util.function.Supplier;
 public class ModItems {
 
     // ----------------
-    // Osmium
+
+    // Ingots
+    public static final Supplier<Item> REFINED_IRON_INGOT = registerItem("refined_iron_ingot", ModCreativeTabs.MAIN_ITEM_GROUP);
     public static final Supplier<Item> OSMIUM_INGOT = registerItem("osmium_ingot", ModCreativeTabs.MAIN_ITEM_GROUP);
+
+    // Raw
     public static final Supplier<Item> RAW_OSMIUM = registerItem("raw_osmium", ModCreativeTabs.MAIN_ITEM_GROUP);
 
     public static final Supplier<Item> RAW_OSMIUM_BLOCK = registerBlockItem("raw_osmium_block", ModBlocks.RAW_OSMIUM_BLOCK, ModCreativeTabs.MAIN_ITEM_GROUP);

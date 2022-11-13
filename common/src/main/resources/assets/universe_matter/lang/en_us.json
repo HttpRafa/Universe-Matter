@@ -7,5 +7,7 @@
   "block.universe_matter.osmium_block": "Osmium Block",
 
   "item.universe_matter.osmium_ingot": "Osmium Ingot",
+  "item.universe_matter.refined_iron_ingot": "Refined Iron Ingot",
+
   "item.universe_matter.raw_osmium": "Raw Osmium"
 }

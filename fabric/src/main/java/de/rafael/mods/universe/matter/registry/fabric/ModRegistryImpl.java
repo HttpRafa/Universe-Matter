@@ -33,7 +33,7 @@ package de.rafael.mods.universe.matter.registry.fabric;
 //------------------------------
 
 import de.rafael.mods.universe.matter.UniverseMatter;
-import de.rafael.mods.universe.matter.utils.Data3v;
+import de.rafael.mods.universe.matter.utils.TripleValue;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -50,9 +50,9 @@ public class ModRegistryImpl {
     }
 
     @SuppressWarnings("unchecked")
-    public static <V, T extends V> Data3v<Supplier<T>, ResourceKey<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
+    public static <V, T extends V> TripleValue<Supplier<T>, ResourceKey<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
         T register = Registry.register(registry, new ResourceLocation(UniverseMatter.MOD_ID, id), object.get());
-        return Data3v.of(() -> register, (ResourceKey<T>)ResourceKey.create(registry.key(), new ResourceLocation(UniverseMatter.MOD_ID, id)), new ResourceLocation(UniverseMatter.MOD_ID, id));
+        return TripleValue.of(() -> register, (ResourceKey<T>)ResourceKey.create(registry.key(), new ResourceLocation(UniverseMatter.MOD_ID, id)), new ResourceLocation(UniverseMatter.MOD_ID, id));
     }
 
 }

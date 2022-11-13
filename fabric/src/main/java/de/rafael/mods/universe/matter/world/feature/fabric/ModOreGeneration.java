@@ -40,7 +40,7 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 public class ModOreGeneration {
 
     public static void init() {
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.OSMIUM_ORE_PLACED.getB());
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.OSMIUM_ORE_PLACED.getSecond());
     }
 
 }

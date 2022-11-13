@@ -32,44 +32,44 @@ package de.rafael.mods.universe.matter.utils;
 //
 //------------------------------
 
-public class Data3v<A, B, C> {
+public class TripleValue<A, B, C> {
 
-    private A a;
-    private B b;
-    private C c;
+    private A first;
+    private B second;
+    private C third;
 
-    public Data3v(A a, B b, C c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public TripleValue(A first, B second, C third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
     }
 
-    public static<T, F, E> Data3v<T, F, E> of(T t, F f, E e) {
-        return new Data3v<>(t, f, e);
+    public static<T, F, E> TripleValue<T, F, E> of(T t, F f, E e) {
+        return new TripleValue<>(t, f, e);
     }
 
-    public A getA() {
-        return a;
+    public A getFirst() {
+        return first;
     }
 
-    public void setA(A a) {
-        this.a = a;
+    public void setFirst(A first) {
+        this.first = first;
     }
 
-    public B getB() {
-        return b;
+    public B getSecond() {
+        return second;
     }
 
-    public void setB(B b) {
-        this.b = b;
+    public void setSecond(B second) {
+        this.second = second;
     }
 
-    public C getC() {
-        return c;
+    public C getThird() {
+        return third;
     }
 
-    public void setC(C c) {
-        this.c = c;
+    public void setThird(C third) {
+        this.third = third;
     }
 
 }

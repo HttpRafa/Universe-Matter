@@ -33,7 +33,7 @@ package de.rafael.mods.universe.matter.registry.feature;
 //------------------------------
 
 import de.rafael.mods.universe.matter.registry.ModRegistry;
-import de.rafael.mods.universe.matter.utils.Data3v;
+import de.rafael.mods.universe.matter.utils.TripleValue;
 import net.minecraft.core.Holder;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.resources.ResourceKey;
@@ -46,7 +46,7 @@ import java.util.function.Supplier;
 
 public class ModPlacedFeatures {
 
-    public static final Data3v<Supplier<PlacedFeature>, ResourceKey<PlacedFeature>, ResourceLocation> OSMIUM_ORE_PLACED = register("osmium_ore_placed", () -> new PlacedFeature(Holder.direct(ModConfiguredFeatures.OSMIUM_ORE.get()),
+    public static final TripleValue<Supplier<PlacedFeature>, ResourceKey<PlacedFeature>, ResourceLocation> OSMIUM_ORE_PLACED = register("osmium_ore_placed", () -> new PlacedFeature(Holder.direct(ModConfiguredFeatures.OSMIUM_ORE.get()),
             commonOrePlacement(5,
                     HeightRangePlacement.triangle(
                             VerticalAnchor.absolute(-45),
@@ -68,7 +68,7 @@ public class ModPlacedFeatures {
         return orePlacement(RarityFilter.onAverageOnceEvery(i), placementModifier);
     }
 
-    private static <T extends PlacedFeature> Data3v<Supplier<T>, ResourceKey<T>, ResourceLocation> register(String id, Supplier<T> object) {
+    private static <T extends PlacedFeature> TripleValue<Supplier<T>, ResourceKey<T>, ResourceLocation> register(String id, Supplier<T> object) {
         return ModRegistry.registerFull(BuiltinRegistries.PLACED_FEATURE, id, object);
     }
 
