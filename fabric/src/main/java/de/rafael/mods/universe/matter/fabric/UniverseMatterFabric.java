@@ -25,6 +25,7 @@
 package de.rafael.mods.universe.matter.fabric;
 
 import de.rafael.mods.universe.matter.UniverseMatter;
+import de.rafael.mods.universe.matter.world.feature.fabric.ModOreGeneration;
 import net.fabricmc.api.ModInitializer;
 
 public class UniverseMatterFabric implements ModInitializer {
@@ -32,6 +33,8 @@ public class UniverseMatterFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         UniverseMatter.init();
+
+        ModOreGeneration.init();
     }
 
 }

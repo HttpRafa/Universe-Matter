@@ -22,23 +22,29 @@
  * SOFTWARE.
  */
 
-package de.rafael.mods.universe.matter.registry;
+package de.rafael.mods.universe.matter.world.feature;
 
 //------------------------------
 //
 // This class was developed by Rafael K.
-// On 11/11/2022 at 8:38 PM
+// On 11/12/2022 at 11:34 PM
 // In the project universe-matter
 //
 //------------------------------
 
-import de.rafael.mods.universe.matter.UniverseMatter;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+import com.google.common.base.Suppliers;
+import de.rafael.mods.universe.matter.registry.ModBlocks;
+import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 
-public class ModCreativeTabs {
+import java.util.List;
+import java.util.function.Supplier;
 
-    public static final CreativeModeTab MAIN_ITEM_GROUP = ModRegistry.createTab(new ResourceLocation(UniverseMatter.MOD_ID, "main"), () -> new ItemStack(ModItems.OSMIUM_INGOT.get()));
+public class ModOreGen {
+
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD = Suppliers.memoize(() -> List.of(
+       OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.OSMIUM_ORE.get().defaultBlockState()),
+       OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_OSMIUM_ORE.get().defaultBlockState())
+    ));
 
 }

@@ -4,5 +4,8 @@
   "block.universe_matter.osmium_ore": "Osmium Ore",
   "block.universe_matter.deepslate_osmium_ore": "Deepslate Osmium Ore",
   "block.universe_matter.raw_osmium_block": "Raw Osmium Block",
-  "block.universe_matter.osmium_block": "Osmium Block"
+  "block.universe_matter.osmium_block": "Osmium Block",
+
+  "item.universe_matter.osmium_ingot": "Osmium Ingot",
+  "item.universe_matter.raw_osmium": "Raw Osmium"
 }

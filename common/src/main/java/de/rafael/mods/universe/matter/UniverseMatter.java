@@ -26,6 +26,9 @@ package de.rafael.mods.universe.matter;
 
 import de.rafael.mods.universe.matter.registry.ModBlocks;
 import de.rafael.mods.universe.matter.registry.ModItems;
+import de.rafael.mods.universe.matter.registry.feature.ModConfiguredFeatures;
+import de.rafael.mods.universe.matter.registry.feature.ModFeatures;
+import de.rafael.mods.universe.matter.registry.feature.ModPlacedFeatures;
 
 public class UniverseMatter {
 
@@ -34,6 +37,10 @@ public class UniverseMatter {
     public static void init() {
 
         // Registry
+        ModFeatures.init();
+        ModPlacedFeatures.init();
+        ModConfiguredFeatures.init();
+
         ModBlocks.init();
         ModItems.init();
 

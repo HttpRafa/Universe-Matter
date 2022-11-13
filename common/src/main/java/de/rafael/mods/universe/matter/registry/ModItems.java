@@ -42,22 +42,27 @@ import java.util.function.Supplier;
 
 public class ModItems {
 
-    // Block Items
-    public static final Supplier<Item> OSMIUM_BLOCK = registerBlockItem("osmium_block", ModBlocks.OSMIUM_BLOCK, ModCreativeTabs.MAIN_ITEM_GROUP);
+    // ----------------
+    // Osmium
+    public static final Supplier<Item> OSMIUM_INGOT = registerItem("osmium_ingot", ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> RAW_OSMIUM = registerItem("raw_osmium", ModCreativeTabs.MAIN_ITEM_GROUP);
+
     public static final Supplier<Item> RAW_OSMIUM_BLOCK = registerBlockItem("raw_osmium_block", ModBlocks.RAW_OSMIUM_BLOCK, ModCreativeTabs.MAIN_ITEM_GROUP);
     public static final Supplier<Item> OSMIUM_ORE = registerBlockItem("osmium_ore", ModBlocks.OSMIUM_ORE, ModCreativeTabs.MAIN_ITEM_GROUP);
     public static final Supplier<Item> DEEPSLATE_OSMIUM_ORE = registerBlockItem("deepslate_osmium_ore", ModBlocks.DEEPSLATE_OSMIUM_ORE, ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> OSMIUM_BLOCK = registerBlockItem("osmium_block", ModBlocks.OSMIUM_BLOCK, ModCreativeTabs.MAIN_ITEM_GROUP);
+    // ----------------
 
     public static void init() {
     }
 
-    public static Supplier<Item> registerBlockItem(String id, Supplier<Block> block, CreativeModeTab tab) {
-        Supplier<Item> item = () -> new BlockItem(block.get(), new Item.Properties().tab(tab));
+    private static Supplier<Item> registerBlockItem(String id, Supplier<Block> block, CreativeModeTab creativeModeTab) {
+        Supplier<Item> item = () -> new BlockItem(block.get(), new Item.Properties().tab(creativeModeTab));
         return register(id, item);
     }
 
-    public static Supplier<Item> registerItem(String id, CreativeModeTab tab) {
-        return register(id, () -> new Item(new Item.Properties().tab(tab)));
+    private static Supplier<Item> registerItem(String id, CreativeModeTab creativeModeTab) {
+        return register(id, () -> new Item(new Item.Properties().tab(creativeModeTab)));
     }
 
     private static <T extends Item> Supplier<T> register(String id, Supplier<T> object) {

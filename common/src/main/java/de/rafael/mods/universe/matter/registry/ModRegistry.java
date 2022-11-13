@@ -32,11 +32,12 @@ package de.rafael.mods.universe.matter.registry;
 //
 //------------------------------
 
-import com.mojang.datafixers.util.Pair;
+import de.rafael.mods.universe.matter.utils.Data3v;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -52,12 +53,12 @@ import java.util.function.Supplier;
 public class ModRegistry {
 
     @ExpectPlatform
-    public static <V, T extends V> Pair<Supplier<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
+    public static <V, T extends V> Data3v<Supplier<T>, ResourceKey<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
         throw new NotImplementedException();
     }
 
     public static <V, T extends V> Supplier<T> register(Registry<V> registry, String id, Supplier<T> object) {
-        return registerFull(registry, id, object).getFirst();
+        return registerFull(registry, id, object).getA();
     }
 
     @ExpectPlatform

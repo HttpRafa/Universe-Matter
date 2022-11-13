@@ -32,9 +32,10 @@ package de.rafael.mods.universe.matter.registry.forge;
 //
 //------------------------------
 
-import com.mojang.datafixers.util.Pair;
 import de.rafael.mods.universe.matter.UniverseMatter;
+import de.rafael.mods.universe.matter.utils.Data3v;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -66,9 +67,9 @@ public class ModRegistryImpl {
         return deferredRegister;
     }
 
-    public static <V, T extends V> Pair<Supplier<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
+    public static <V, T extends V> Data3v<Supplier<T>, ResourceKey<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
         var registered = getOrCreateRegistry(registry).register(id, object);
-        return Pair.of(registered, registered.getId());
+        return Data3v.of(registered, registered.getKey(), registered.getId());
     }
 
 }

@@ -22,39 +22,35 @@
  * SOFTWARE.
  */
 
-package de.rafael.mods.universe.matter.registry;
+package de.rafael.mods.universe.matter.registry.feature;
 
 //------------------------------
 //
 // This class was developed by Rafael K.
-// On 11/11/2022 at 8:07 PM
+// On 11/12/2022 at 11:27 PM
 // In the project universe-matter
 //
 //------------------------------
 
-import net.minecraft.core.Registry;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import de.rafael.mods.universe.matter.registry.ModRegistry;
+import de.rafael.mods.universe.matter.world.feature.ModOreGen;
+import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class ModConfiguredFeatures {
 
-    // Osmium
-    public static final Supplier<Block> OSMIUM_BLOCK = register("osmium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
-    public static final Supplier<Block> RAW_OSMIUM_BLOCK = register("raw_osmium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK)));
-    public static final Supplier<Block> OSMIUM_ORE = register("osmium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_ORE), UniformInt.of(0, 2)));
-    public static final Supplier<Block> DEEPSLATE_OSMIUM_ORE = register("deepslate_osmium_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_GOLD_ORE), UniformInt.of(0, 2)));
+    public static final Supplier<ConfiguredFeature<?, ?>> OSMIUM_ORE = register("osmium_ore", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ModOreGen.OVERWORLD.get(), 6)));
 
     public static void init() {
 
     }
 
-    private static <T extends Block> Supplier<T> register(String id, Supplier<T> object) {
-        return ModRegistry.register(Registry.BLOCK, id, object);
+    private static <T extends ConfiguredFeature<?, ?>> Supplier<T> register(String id, Supplier<T> object) {
+        return ModRegistry.register(BuiltinRegistries.CONFIGURED_FEATURE, id, object);
     }
 
 }

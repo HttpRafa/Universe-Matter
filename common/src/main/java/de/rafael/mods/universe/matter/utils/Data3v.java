@@ -22,23 +22,54 @@
  * SOFTWARE.
  */
 
-package de.rafael.mods.universe.matter.registry;
+package de.rafael.mods.universe.matter.utils;
 
 //------------------------------
 //
 // This class was developed by Rafael K.
-// On 11/11/2022 at 8:38 PM
+// On 11/13/2022 at 1:52 AM
 // In the project universe-matter
 //
 //------------------------------
 
-import de.rafael.mods.universe.matter.UniverseMatter;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+public class Data3v<A, B, C> {
 
-public class ModCreativeTabs {
+    private A a;
+    private B b;
+    private C c;
 
-    public static final CreativeModeTab MAIN_ITEM_GROUP = ModRegistry.createTab(new ResourceLocation(UniverseMatter.MOD_ID, "main"), () -> new ItemStack(ModItems.OSMIUM_INGOT.get()));
+    public Data3v(A a, B b, C c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public static<T, F, E> Data3v<T, F, E> of(T t, F f, E e) {
+        return new Data3v<>(t, f, e);
+    }
+
+    public A getA() {
+        return a;
+    }
+
+    public void setA(A a) {
+        this.a = a;
+    }
+
+    public B getB() {
+        return b;
+    }
+
+    public void setB(B b) {
+        this.b = b;
+    }
+
+    public C getC() {
+        return c;
+    }
+
+    public void setC(C c) {
+        this.c = c;
+    }
 
 }

@@ -32,10 +32,11 @@ package de.rafael.mods.universe.matter.registry.fabric;
 //
 //------------------------------
 
-import com.mojang.datafixers.util.Pair;
 import de.rafael.mods.universe.matter.UniverseMatter;
+import de.rafael.mods.universe.matter.utils.Data3v;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -48,9 +49,10 @@ public class ModRegistryImpl {
         return FabricItemGroupBuilder.build(location, icon);
     }
 
-    public static <V, T extends V> Pair<Supplier<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
+    @SuppressWarnings("unchecked")
+    public static <V, T extends V> Data3v<Supplier<T>, ResourceKey<T>, ResourceLocation> registerFull(Registry<V> registry, String id, Supplier<T> object) {
         T register = Registry.register(registry, new ResourceLocation(UniverseMatter.MOD_ID, id), object.get());
-        return Pair.of(() -> register, new ResourceLocation(UniverseMatter.MOD_ID, id));
+        return Data3v.of(() -> register, (ResourceKey<T>)ResourceKey.create(registry.key(), new ResourceLocation(UniverseMatter.MOD_ID, id)), new ResourceLocation(UniverseMatter.MOD_ID, id));
     }
 
 }

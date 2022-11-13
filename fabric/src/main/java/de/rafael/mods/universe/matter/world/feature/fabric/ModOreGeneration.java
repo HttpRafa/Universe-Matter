@@ -22,23 +22,25 @@
  * SOFTWARE.
  */
 
-package de.rafael.mods.universe.matter.registry;
+package de.rafael.mods.universe.matter.world.feature.fabric;
 
 //------------------------------
 //
 // This class was developed by Rafael K.
-// On 11/11/2022 at 8:38 PM
+// On 11/13/2022 at 1:37 AM
 // In the project universe-matter
 //
 //------------------------------
 
-import de.rafael.mods.universe.matter.UniverseMatter;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+import de.rafael.mods.universe.matter.registry.feature.ModPlacedFeatures;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.world.level.levelgen.GenerationStep;
 
-public class ModCreativeTabs {
+public class ModOreGeneration {
 
-    public static final CreativeModeTab MAIN_ITEM_GROUP = ModRegistry.createTab(new ResourceLocation(UniverseMatter.MOD_ID, "main"), () -> new ItemStack(ModItems.OSMIUM_INGOT.get()));
+    public static void init() {
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.OSMIUM_ORE_PLACED.getB());
+    }
 
 }
