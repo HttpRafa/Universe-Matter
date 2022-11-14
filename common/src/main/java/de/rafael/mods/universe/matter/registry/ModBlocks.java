@@ -43,6 +43,14 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
 
+    // Machines
+    // public static final Supplier<Block> ELECTRIC_HEAT_COMPRESSOR = register("electric_heat_compressor", () -> new ElectricHeatCompressor(BlockBehaviour.Properties.copy(Blocks.BLAST_FURNACE)));
+
+    // Casings
+    public static final Supplier<Block> STEEL_CASING = register("steel_casing", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> REINFORCED_STEEL_CASING = register("reinforced_steel_casing", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> REINFORCED_GLASS = register("reinforced_glass", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GLASS)));
+
     // Osmium
     public static final Supplier<Block> OSMIUM_BLOCK = register("osmium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
     public static final Supplier<Block> RAW_OSMIUM_BLOCK = register("raw_osmium_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK)));

@@ -4,10 +4,22 @@
   "block.universe_matter.osmium_ore": "Osmium Ore",
   "block.universe_matter.deepslate_osmium_ore": "Deepslate Osmium Ore",
   "block.universe_matter.raw_osmium_block": "Raw Osmium Block",
+
   "block.universe_matter.osmium_block": "Osmium Block",
+  "block.universe_matter.steel_casing": "Steel Casing",
+  "block.universe_matter.reinforced_steel_casing": "Reinforced Steel Casing",
+  "block.universe_matter.reinforced_glass": "Reinforced Glass",
 
   "item.universe_matter.osmium_ingot": "Osmium Ingot",
   "item.universe_matter.refined_iron_ingot": "Refined Iron Ingot",
+  "item.universe_matter.steel_ingot": "Steel Ingot",
+  "item.universe_matter.enriched_iron": "Enriched Iron",
 
-  "item.universe_matter.raw_osmium": "Raw Osmium"
+  "item.universe_matter.steel_dust": "Steel Dust",
+  "item.universe_matter.coal_dust": "Coal Dust",
+
+  "item.universe_matter.raw_osmium": "Raw Osmium",
+
+  "item.universe_matter.vacuum_cell": "Vacuum Cell",
+  "item.universe_matter.matter_cell": "Matter Cell"
 }

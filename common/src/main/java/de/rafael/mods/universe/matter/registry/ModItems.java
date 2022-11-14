@@ -42,20 +42,32 @@ import java.util.function.Supplier;
 
 public class ModItems {
 
-    // ----------------
+    // Cells
+    public static final Supplier<Item> VACUUM_CELL = registerItem("vacuum_cell", ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> MATTER_CELL = registerItem("matter_cell", ModCreativeTabs.MAIN_ITEM_GROUP);
+
+    // Dusts
+    public static final Supplier<Item> STEEL_DUST = registerItem("steel_dust", ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> COAL_DUST = registerItem("coal_dust", ModCreativeTabs.MAIN_ITEM_GROUP);
 
     // Ingots
     public static final Supplier<Item> REFINED_IRON_INGOT = registerItem("refined_iron_ingot", ModCreativeTabs.MAIN_ITEM_GROUP);
     public static final Supplier<Item> OSMIUM_INGOT = registerItem("osmium_ingot", ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> STEEL_INGOT = registerItem("steel_ingot", ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> ENRICHED_IRON = registerItem("enriched_iron", ModCreativeTabs.MAIN_ITEM_GROUP);
 
-    // Raw
+    // Raws
     public static final Supplier<Item> RAW_OSMIUM = registerItem("raw_osmium", ModCreativeTabs.MAIN_ITEM_GROUP);
 
+    // Blocks
     public static final Supplier<Item> RAW_OSMIUM_BLOCK = registerBlockItem("raw_osmium_block", ModBlocks.RAW_OSMIUM_BLOCK, ModCreativeTabs.MAIN_ITEM_GROUP);
     public static final Supplier<Item> OSMIUM_ORE = registerBlockItem("osmium_ore", ModBlocks.OSMIUM_ORE, ModCreativeTabs.MAIN_ITEM_GROUP);
     public static final Supplier<Item> DEEPSLATE_OSMIUM_ORE = registerBlockItem("deepslate_osmium_ore", ModBlocks.DEEPSLATE_OSMIUM_ORE, ModCreativeTabs.MAIN_ITEM_GROUP);
+
     public static final Supplier<Item> OSMIUM_BLOCK = registerBlockItem("osmium_block", ModBlocks.OSMIUM_BLOCK, ModCreativeTabs.MAIN_ITEM_GROUP);
-    // ----------------
+    public static final Supplier<Item> STEEL_CASING = registerBlockItem("steel_casing", ModBlocks.STEEL_CASING, ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> REINFORCED_STEEL_CASING = registerBlockItem("reinforced_steel_casing", ModBlocks.REINFORCED_STEEL_CASING, ModCreativeTabs.MAIN_ITEM_GROUP);
+    public static final Supplier<Item> REINFORCED_GLASS = registerBlockItem("reinforced_glass", ModBlocks.REINFORCED_GLASS, ModCreativeTabs.MAIN_ITEM_GROUP);
 
     public static void init() {
     }
